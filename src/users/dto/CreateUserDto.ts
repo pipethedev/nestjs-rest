@@ -1,4 +1,12 @@
-import { IsString, IsNotEmpty, Min, IsEmail } from 'class-validator';
+import {
+  IsString,
+  IsNotEmpty,
+  Min,
+  IsEmail,
+  ValidatorConstraint,
+  ValidatorConstraintInterface,
+  ValidationArguments,
+} from 'class-validator';
 
 export class CreateUserDto {
   @IsString()
@@ -14,7 +22,6 @@ export class CreateUserDto {
   @IsString()
   readonly username: string;
 
-  @Min(7)
   @IsString()
-  readonly password: string;
+  password: string;
 }
